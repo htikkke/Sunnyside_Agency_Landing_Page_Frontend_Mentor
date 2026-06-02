@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white-color: hsl(0, 100%, 100%);
+  --color-hover-color: hsla(0, 0%, 100%, 0.29);
+  --color-yellow-color: hsl(51, 74%, 62%);
+  --color-pink-color: hsl(7, 99%, 70%);
+  --color-dark-grey: hsl(212, 27%, 19%);
+  --color-dark-green: hsl(167, 40%, 24%);
+  --color-light-green: hsl(167, 47%, 53%);
+  --color-dark-blue: hsl(198, 62%, 26%);
+  --color-light-grey: hsl(210, 4%, 67%);
+  --color-medium-grey: hsl(232, 10%, 55%);
+  --font-bar: "Barlow", sans-serif;
+  --font-serif: "Fraunces", serif;
+}
