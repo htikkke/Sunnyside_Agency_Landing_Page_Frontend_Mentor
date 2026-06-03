@@ -3,8 +3,10 @@
 @theme {
   --color-white-color: hsl(0, 100%, 100%);
   --color-hover-color: hsla(0, 0%, 100%, 0.29);
-  --color-yellow-color: hsl(51, 74%, 62%);
+  --color-yellow-color: hsl(51, 98%, 51%);
+  --color-lightyellow-color: hsl(51, 89%, 78%);
   --color-pink-color: hsl(7, 99%, 70%);
+  --color-lightpink-color: hsl(7, 100%, 83%);
   --color-dark-grey: hsl(212, 27%, 19%);
   --color-dark-green: hsl(167, 40%, 24%);
   --color-light-green: hsl(167, 47%, 53%);
