@@ -23,15 +23,17 @@
   <body class="w-full min-h-screen">
     <div
       id="main-container"
-      class="w-full h-full grid grid-rows-[auto,auto,auto,auto,auto] grid-cols-1"
+      class="w-full h-full grid grid-rows-[auto,auto,auto,auto,auto] grid-cols-1 max-[500px]:w-auto"
     >
       <div
-        class="row-[1/2] w-full h-170 bg-cover bg-bottom bg-no-repeat bg-[url('/src/images/desktop/image-header.jpg')] p-10 grid grid-rows-10 max-[500px]:h-100"
+        class="row-[1/2] w-full h-170 bg-cover bg-bottom bg-no-repeat bg-[url('/src/images/desktop/image-header.jpg')] p-10 grid grid-rows-10 max-[500px]:bg-[url('/src/images/mobile/image-header.jpg')] max-[500px]:p-4"
       >
-        <div class="flex justify-between items-start row-span-1">
+        <div
+          class="flex justify-between items-start row-span-1 max-[500px]:items-center"
+        >
           <p class="text-white-color font-bold text-2xl font-bar">sunnyside</p>
           <nav
-            class="text-white-color flex gap-8 items-center text-sm cursor-pointer"
+            class="text-white-color flex gap-8 items-center text-sm cursor-pointer max-[500px]:hidden"
           >
             <a href="#" class="font-bar">About</a>
             <a href="#" class="font-bar">Services</a>
@@ -42,22 +44,31 @@
               >Contact</a
             >
           </nav>
+          <div id="menu-icon" class="block min-[500px]:hidden">
+            <img src="/src/images/icon-hamburger.svg" />
+          </div>
         </div>
         <div class="row-[2/10] flex flex-col items-center mt-10">
           <h1
-            class="text-5xl uppercase tracking-widest font-bold text-white-color mb-10 font-serif"
+            class="text-5xl uppercase tracking-widest font-bold text-white-color mb-10 font-serif max-[500px]:text-center"
           >
             We are creatives
           </h1>
           <img src="/src/images/icon-arrow-down.svg" />
         </div>
       </div>
-      <div class="h-350 row-[2/3] grid grid-rows-3 grid-cols-2">
-        <div class="flex flex-col items-start gap-5 p-20 pr-30 justify-center">
-          <h1 class="font-bold text-3xl font-serif text-dark-grey">
+      <div
+        class="h-350 row-[2/3] grid grid-rows-3 grid-cols-2 max-[800px]:h-auto max-[800px]:grid-cols-1 max-[800px]:grid-rows-6"
+      >
+        <div
+          class="flex flex-col items-start gap-5 p-20 pr-30 justify-center max-[500px]:row-[2/3] max-[500px]:items-center max-[500px]:p-15 max-[500px]:gap-8"
+        >
+          <h1
+            class="font-bold text-3xl font-serif text-dark-grey max-[500px]:text-center"
+          >
             Transform your brand
           </h1>
-          <p class="font-bar">
+          <p class="font-bar max-[500px]:text-center">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
@@ -73,23 +84,35 @@
             LEARN MORE
           </a>
         </div>
-        <div>
+        <div class="max-[500px]:row-[1/2]">
           <img
             src="/src/images/desktop/image-transform.jpg"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover max-[800px]:col-[1/2] max-[500px]:hidden"
+          />
+          <img
+            src="/src/images/mobile/image-transform.jpg"
+            class="block min-[500px]:hidden w-full h-full object-cover"
           />
         </div>
         <div>
           <img
             src="/src/images/desktop/image-stand-out.jpg"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover max-[500px]:hidden"
+          />
+          <img
+            src="/src/images/mobile/image-stand-out.jpg"
+            class="w-full h-full object-cover block min-[500px]:hidden"
           />
         </div>
-        <div class="flex flex-col items-start gap-5 p-20 pr-30 justify-center">
-          <h1 class="font-bold text-3xl font-serif text-dark-grey">
+        <div
+          class="flex flex-col items-start gap-5 p-20 pr-30 justify-center max-[500px]:items-center max-[500px]:p-15 max-[500px]:gap-8"
+        >
+          <h1
+            class="font-bold text-3xl font-serif text-dark-grey max-[500px]:text-center"
+          >
             Stand out to the right audience
           </h1>
-          <p class="font-bar">
+          <p class="font-bar max-[500px]:text-center">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.
@@ -106,7 +129,7 @@
           </a>
         </div>
         <div
-          class="bg-[url('/src/images/desktop/image-graphic-design.jpg')] flex flex-col gap-4 text-center justify-end pb-5 bg-center"
+          class="bg-[url('/src/images/desktop/image-graphic-design.jpg')] flex flex-col gap-4 text-center justify-end pb-5 bg-center max-[500px]:bg-[url('/src/images/mobile/image-graphic-design.jpg')] max-[500px]:bg-cover"
         >
           <h1 class="text-dark-green text-2xl font-black font-serif">
             Graphic design
@@ -118,7 +141,7 @@
           </p>
         </div>
         <div
-          class="bg-[url('/src/images/desktop/image-photography.jpg')] flex flex-col gap-4 text-center justify-end pb-5 bg-top bg-cover"
+          class="bg-[url('/src/images/desktop/image-photography.jpg')] flex flex-col gap-4 text-center justify-end pb-5 bg-top bg-cover max-[500px]:bg-[url('/src/images/mobile/image-photography.jpg') max-[500px]:bg-cover"
         >
           <h1 class="text-dark-blue text-2xl font-black font-serif">
             Photography
@@ -130,16 +153,22 @@
           </p>
         </div>
       </div>
-      <div class="bg-white-color h-150 grid grid-rows-10">
-        <div class="row-[1/4] flex items-center justify-center">
+      <div class="bg-white-color h-150 grid grid-rows-10 max-[800px]:h-auto">
+        <div
+          class="row-[1/4] flex items-center justify-center max-[800px]:row-[1/3]"
+        >
           <h3
             class="text-light-grey uppercase tracking-widest font-serif font-bold"
           >
             Client testimonials
           </h3>
         </div>
-        <div class="row-[4/10] grid grid-cols-3 px-10">
-          <div class="flex flex-col items-center text-center justify-evenly">
+        <div
+          class="row-[4/10] grid grid-cols-3 px-10 max-[800px]:grid-cols-1 max-[800px]:grid-rows-3 max-[800px]:row-[3/11]"
+        >
+          <div
+            class="flex flex-col items-center text-center justify-evenly max-[800px]:gap-8 max-[800px]:mb-8"
+          >
             <img
               src="/src/images/image-emily.jpg"
               class="rounded-full h-12 w-12"
@@ -156,7 +185,9 @@
               >
             </p>
           </div>
-          <div class="flex flex-col items-center text-center justify-evenly">
+          <div
+            class="flex flex-col items-center text-center justify-evenly max-[800px]:gap-8 max-[800px]:mb-8"
+          >
             <img
               src="/src/images/image-thomas.jpg"
               class="rounded-full h-12 w-12"
@@ -173,7 +204,9 @@
               </span>
             </p>
           </div>
-          <div class="flex flex-col items-center text-center justify-evenly">
+          <div
+            class="flex flex-col items-center text-center justify-evenly max-[800px]:gap-8 max-[800px]:mb-8"
+          >
             <img
               src="/src/images/image-jennie.jpg"
               class="rounded-full h-12 w-12"
@@ -192,11 +225,41 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-4">
-        <img src="/src/images/desktop/image-gallery-milkbottles.jpg" />
-        <img src="/src/images/desktop/image-gallery-orange.jpg" />
-        <img src="/src/images/desktop/image-gallery-cone.jpg" />
-        <img src="/src/images/desktop/image-gallery-sugarcubes.jpg" />
+      <div
+        class="grid grid-cols-4 max-[800px]:h-auto max-[500px]:grid-cols-2 max-[500px]:grid-rows-2 max-[500px]:h-auto"
+      >
+        <img
+          src="/src/images/desktop/image-gallery-milkbottles.jpg"
+          class="max-[500px]:hidden"
+        />
+        <img
+          src="/src/images/mobile/image-gallery-milkbottles.jpg"
+          class="block min-[500px]:hidden"
+        />
+        <img
+          src="/src/images/desktop/image-gallery-orange.jpg"
+          class="max-[500px]:hidden"
+        />
+        <img
+          src="/src/images/mobile/image-gallery-orange.jpg"
+          class="block min-[500px]:hidden"
+        />
+        <img
+          src="/src/images/desktop/image-gallery-cone.jpg"
+          class="max-[500px]:hidden"
+        />
+        <img
+          src="/src/images/mobile/image-gallery-cone.jpg"
+          class="block min-[500px]:hidden"
+        />
+        <img
+          src="/src/images/desktop/image-gallery-sugarcubes.jpg"
+          class="max-[500px]:hidden"
+        />
+        <img
+          src="/src/images/mobile/image-gallery-sugar-cubes.jpg"
+          class="block min-[500px]:hidden"
+        />
       </div>
       <div
         class="bg-light-green h-70 flex flex-col items-center justify-center gap-10"
@@ -208,7 +271,7 @@
             sunnyside
           </h3>
         </div>
-        <div class="flex gap-10 text-dark-green">
+        <div class="flex gap-10 text-dark-green max-[500px]:gap-15">
           <a href="#" class="hover:text-white-color">About</a>
           <a href="#" class="hover:text-white-color">Services</a>
           <a href="#" class="hover:text-white-color">Projects</a>
