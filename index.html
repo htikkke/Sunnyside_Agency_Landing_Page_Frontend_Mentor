@@ -29,7 +29,7 @@
         class="row-[1/2] w-full h-170 bg-cover bg-bottom bg-no-repeat bg-[url('/src/images/desktop/image-header.jpg')] p-10 grid grid-rows-10 max-[500px]:bg-[url('/src/images/mobile/image-header.jpg')] max-[500px]:p-4"
       >
         <div
-          class="flex justify-between items-start row-span-1 max-[500px]:items-center"
+          class="relative flex justify-between items-start row-span-1 max-[500px]:items-center"
         >
           <p class="text-white-color font-bold text-2xl font-bar">sunnyside</p>
           <nav
@@ -46,6 +46,31 @@
           </nav>
           <div id="menu-icon" class="block min-[500px]:hidden">
             <img src="/src/images/icon-hamburger.svg" />
+          </div>
+          <div
+            id="popup-menu"
+            class="h-70 w-70 absolute top-24 right-3 bg-white p-8 flex-col items-center gap-8 text-center shadow-xl before:content-[''] before:absolute before:bottom-full before:right-0 before:border-15 before:border-transparent before:border-b-white before:border-r-white hidden"
+          >
+            <a
+              href="#"
+              class="text-gray-500 font-sans text-xl font-semibold hover:text-black"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 font-sans text-xl font-semibold hover:text-black"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 font-sans text-xl font-semibold hover:text-black"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-base font-bold uppercase font-serif bg-yellow-color px-4 py-3 rounded-3xl"
+              >Contact</a
+            >
           </div>
         </div>
         <div class="row-[2/10] flex flex-col items-center mt-10">
@@ -105,7 +130,7 @@
           />
         </div>
         <div
-          class="flex flex-col items-start gap-5 p-20 pr-30 justify-center max-[500px]:items-center max-[500px]:p-15 max-[500px]:gap-8"
+          class="flex flex-col items-start gap-5 p-20 pr-30 justify-center max-[800px]:gap-10 max-[500px]:items-center max-[500px]:p-15 max-[500px]:gap-8"
         >
           <h1
             class="font-bold text-3xl font-serif text-dark-grey max-[500px]:text-center"
